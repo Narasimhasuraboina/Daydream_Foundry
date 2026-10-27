@@ -107,7 +107,15 @@ function HomePage() {
         </section>
 
       </main>
-      <footer className="site-footer"><span>© 2026</span><div className="footer-links"><a href="/thoughts">Thoughts</a><a href="#">Back to top ↑</a></div></footer>
+      <footer className="site-footer">
+        <div className="footer-brand">
+          <span className="brand-mark">N</span>
+          <div><strong>Northstar</strong><span>Words worth keeping.</span></div>
+        </div>
+        <p className="footer-message">Keep a little room for wonder.</p>
+        <div className="footer-links"><a href="/thoughts">Thoughts ↗</a><a href="#root">Back to top ↑</a></div>
+        <small className="footer-copyright">© 2026 Northstar</small>
+      </footer>
     </>
   );
 }
@@ -124,7 +132,7 @@ function App() {
   return (
     <>
       <Header />
-      {path === "/thoughts" ? <><main><QuoteLibrary /></main><footer className="site-footer"><span>© 2026 Northstar Studio</span><div className="footer-links"><a href="/">Back to home ↑</a></div></footer></> : <HomePage />}
+      {path === "/thoughts" ? <><main><QuoteLibrary /></main><footer className="site-footer"><div className="footer-brand"><span className="brand-mark">N</span><div><strong>Northstar</strong><span>Words worth keeping.</span></div></div><p className="footer-message">Keep a little room for wonder.</p><div className="footer-links"><a href="/">Home ↑</a></div><small className="footer-copyright">© 2026 Northstar</small></footer></> : <HomePage />}
     </>
   );
 }

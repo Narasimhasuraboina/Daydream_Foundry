@@ -88,8 +88,15 @@ h2 { font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; margin-bottom: 0; }
 .load-more small { color: var(--muted); font-size: .7rem; margin-left: 10px; }
 [data-theme="dark"] .load-more small { color: #cbd8cf; }
 .quote-tab:focus-visible, .quote-card-trigger:focus-visible, .menu-toggle:focus-visible, .theme-toggle:focus-visible, a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
-.site-footer { display: flex; font-size: .75rem; justify-content: space-between; padding: 27px 5vw; }
-.footer-links { display: flex; gap: 25px; }
+.site-footer { align-items: center; border-top: 1px solid var(--line); display: grid; gap: 22px; grid-template-columns: 1fr auto 1fr; padding: 34px 5vw; }
+.footer-brand { align-items: center; display: flex; font-family: var(--display); gap: 10px; }
+.footer-brand .brand-mark { flex: 0 0 auto; }
+.footer-brand div { display: flex; flex-direction: column; gap: 3px; }
+.footer-brand strong { font-size: .9rem; }
+.footer-brand span:not(.brand-mark) { color: var(--muted); font-family: var(--sans); font-size: .7rem; }
+.footer-message { color: var(--muted); font-size: .78rem; margin: 0; text-align: center; }
+.footer-links { display: flex; font-size: .78rem; gap: 25px; justify-content: end; }
+.footer-copyright { color: var(--muted); display: none; font-size: .7rem; }
 .sr-only { height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); }
 
 [data-theme="dark"] {
@@ -127,5 +134,8 @@ h2 { font-size: clamp(2.8rem, 5vw, 5rem); line-height: .95; margin-bottom: 0; }
   .thoughts-content { margin-top: 60px; }
   .section { padding-bottom: 80px; padding-top: 80px; }
   .section-heading { margin-bottom: 60px; }
-  .site-footer { flex-direction: column; gap: 20px; }
+  .site-footer { align-items: start; display: flex; flex-direction: column; gap: 20px; }
+  .footer-message { text-align: left; }
+  .footer-links { justify-content: start; }
+  .footer-copyright { display: block; }
 }
