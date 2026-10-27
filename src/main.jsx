@@ -90,32 +90,43 @@ function QuoteLibrary() {
 function HomePage() {
   return (
     <>
-      <main>
-        <section className="hero">
-          <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-dot"></span> A place for thoughts</p>
-            <h1>Keep the words that make you <em>feel something.</em></h1>
-            <p className="hero-text">A quiet collection of personal writing, emotions, memories, and ideas worth returning to.</p>
-            <div className="hero-actions"><a className="button button-primary" href="/thoughts">Explore thoughts <span aria-hidden="true">↗</span></a><a className="text-link" href="#thoughts">My writing <span aria-hidden="true">↓</span></a></div>
-          </div>
-          <div className="hero-art" aria-label="Abstract orange and blue geometric artwork" role="img"><div className="art-circle"></div><div className="art-block art-block-one"></div><div className="art-block art-block-two"></div><div className="art-line"></div><span className="art-label">Ideas<br />in motion</span></div>
+      <main className="dashboard-shell">
+        <section className="dashboard-topbar">
+          <div className="dashboard-brand"><span className="brand-mark">N</span><strong>Northstar</strong></div>
+          <nav className="dashboard-nav" aria-label="Dashboard navigation">
+            <a className="is-active" href="/">Dashboard</a>
+            <a href="/thoughts">Thoughts</a>
+            <a href="#insights">Insights</a>
+            <a href="#people">People</a>
+          </nav>
+          <div className="dashboard-actions"><span className="status-dot"></span><span>Live view</span><button className="dashboard-avatar" type="button" aria-label="Profile">N</button></div>
         </section>
-
-        <section id="thoughts" className="section thoughts">
-          <div className="section-heading"><p className="eyebrow">01 / Words to keep</p><h2>Good talks.<br /><em>Better thoughts.</em></h2></div>
-          <div className="thoughts-content"><p className="thoughts-intro">Your writing lives here first. Click a card to open the full collection.</p><div className="personal-card-list">{quoteCategories["My writing"].map((quote) => <a className="quote-card quote-card-featured quote-card-link" href="/thoughts" key={quote.title}><span className="quote-mark" aria-hidden="true">“</span><span className="quote-title">{quote.title}</span><span className="quote-toggle" aria-hidden="true">↗</span></a>)}</div></div>
+        <section className="dashboard-heading">
+          <div><p className="eyebrow"><span className="eyebrow-dot"></span> Personal intelligence</p><h1>Thoughts, feelings<br /><em>&amp; everything between.</em></h1></div>
+          <div className="dashboard-date">Updated just now<br /><strong>Tuesday, 27 October 2026</strong></div>
         </section>
-
+        <section className="dashboard-kpis" aria-label="Thought metrics">
+          <article className="metric-card"><span>All thoughts</span><strong>1,501</strong><small className="metric-up">↑ 12.4%</small><div className="metric-line metric-line-orange"></div></article>
+          <article className="metric-card"><span>Emotions explored</span><strong>15</strong><small className="metric-up">↑ 3 new</small><div className="metric-line metric-line-blue"></div></article>
+          <article className="metric-card"><span>Personal writing</span><strong>{quoteCategories["My writing"].length}</strong><small>Keep adding yours</small><div className="metric-line metric-line-green"></div></article>
+          <article className="metric-card metric-card-dark"><span>Current mood</span><strong>Curious</strong><small>Open to possibility</small><div className="mood-orbit"></div></article>
+        </section>
+        <section className="dashboard-grid">
+          <article className="dashboard-panel forecast-panel">
+            <div className="panel-heading"><div><span className="panel-kicker">Activity overview</span><h2>Feeling the flow</h2></div><span className="panel-pill">Last 30 days</span></div>
+            <div className="chart-area"><div className="chart-y-labels"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div className="chart"><div className="chart-grid-lines"></div><svg viewBox="0 0 600 190" role="img" aria-label="Thought activity rising over the last 30 days"><path className="chart-fill" d="M0 160 C70 155 85 130 140 140 S210 120 260 125 S335 90 390 100 S470 60 530 72 S570 35 600 28 L600 190 L0 190 Z"></path><path className="chart-line" d="M0 160 C70 155 85 130 140 140 S210 120 260 125 S335 90 390 100 S470 60 530 72 S570 35 600 28"></path></svg><div className="chart-months"><span>Sep 28</span><span>Oct 05</span><span>Oct 12</span><span>Oct 19</span><span>Oct 27</span></div></div></div>
+          </article>
+          <article className="dashboard-panel channel-panel">
+            <div className="panel-heading"><div><span className="panel-kicker">Emotional mix</span><h2>Where thoughts land</h2></div><span className="panel-pill panel-pill-green">Balanced</span></div>
+            <div className="donut-layout"><div className="donut-chart"><div className="donut-hole">15<small>moods</small></div></div><ul className="legend"><li><i className="legend-orange"></i>Hopeful <strong>32%</strong></li><li><i className="legend-blue"></i>Thoughtful <strong>27%</strong></li><li><i className="legend-ink"></i>Happy <strong>21%</strong></li><li><i className="legend-sand"></i>Everything else <strong>20%</strong></li></ul></div>
+          </article>
+        </section>
+        <section id="insights" className="dashboard-panel insights-panel">
+          <div className="panel-heading"><div><span className="panel-kicker">Recent entries</span><h2>Worth a closer look</h2></div><a className="panel-link" href="/thoughts">View all thoughts ↗</a></div>
+          <div id="people" className="insight-grid">{quoteCategories["My writing"].map((quote) => <a className="insight-card insight-card-featured" href="/thoughts" key={quote.title}><div className="insight-top"><span className="insight-avatar">SC</span><strong>{quote.title}</strong><span className="insight-score">Personal</span></div><p>{quote.text}</p><span className="insight-action">Read entry ↗</span></a>)}<a className="insight-card" href="/thoughts"><div className="insight-top"><span className="insight-avatar insight-avatar-blue">EM</span><strong>Emotional library</strong><span className="insight-score">1,500+</span></div><p>Browse the shelves of feelings, ideas, memories, and small reminders.</p><span className="insight-action">Explore thoughts ↗</span></a><a className="insight-card insight-card-muted" href="/thoughts"><div className="insight-top"><span className="insight-avatar insight-avatar-green">+</span><strong>Make room for more</strong></div><p>Your next honest sentence could be the one that changes the shape of this whole dashboard.</p><span className="insight-action">Add your writing ↗</span></a></div>
+        </section>
       </main>
-      <footer className="site-footer">
-        <div className="footer-brand">
-          <span className="brand-mark">N</span>
-          <div><strong>Northstar</strong><span>Words worth keeping.</span></div>
-        </div>
-        <p className="footer-message">Keep a little room for wonder.</p>
-        <div className="footer-links"><a href="/thoughts">Thoughts ↗</a><a href="#root">Back to top ↑</a></div>
-        <small className="footer-copyright">© 2026 Northstar</small>
-      </footer>
+      <footer className="site-footer dashboard-footer"><div className="footer-brand"><span className="brand-mark">N</span><div><strong>Northstar</strong><span>Words worth keeping.</span></div></div><p className="footer-message">Keep a little room for wonder.</p><div className="footer-links"><a href="/thoughts">Thoughts ↗</a><a href="#root">Back to top ↑</a></div><small className="footer-copyright">© 2026 Northstar</small></footer>
     </>
   );
 }
