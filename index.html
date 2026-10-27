@@ -3,130 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple, modern landing page for Northstar Studio.">
+  <meta name="description" content="A simple, modern collection of ideas and inspiration from Northstar Studio.">
   <title>Northstar Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="Northstar Studio home">
-      <span class="brand-mark">N</span>
-      <span>Northstar</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#work">Our work</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Independent creative studio</p>
-        <h1>Make your next <em>big idea</em> impossible to ignore.</h1>
-        <p class="hero-text">We help ambitious teams turn thoughtful strategy into memorable brands, products, and digital experiences.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore our work <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#services">What we do <span aria-hidden="true">↓</span></a>
-        </div>
-      </div>
-      <div class="hero-art" aria-label="Abstract orange and blue geometric artwork" role="img">
-        <div class="art-circle"></div>
-        <div class="art-block art-block-one"></div>
-        <div class="art-block art-block-two"></div>
-        <div class="art-line"></div>
-        <span class="art-label">Ideas<br>in motion</span>
-      </div>
-    </section>
-
-    <section id="services" class="section services">
-      <div class="section-heading">
-        <p class="eyebrow">01 / Our services</p>
-        <h2>Small team.<br><em>Big energy.</em></h2>
-      </div>
-      <div class="service-list">
-        <article class="service-card">
-          <span class="service-number">01</span>
-          <div>
-            <h3>Brand strategy</h3>
-            <p>Find your clear point of view and give your brand a voice people remember.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </article>
-        <article class="service-card">
-          <span class="service-number">02</span>
-          <div>
-            <h3>Visual identity</h3>
-            <p>Build a flexible visual system that looks and feels unmistakably yours.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </article>
-        <article class="service-card">
-          <span class="service-number">03</span>
-          <div>
-            <h3>Digital experiences</h3>
-            <p>Design useful, beautiful digital products that turn curiosity into action.</p>
-          </div>
-          <span class="card-arrow" aria-hidden="true">↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section id="work" class="section work">
-      <div class="work-heading">
-        <div>
-          <p class="eyebrow">02 / Selected work</p>
-          <h2>A few things<br><em>we've made.</em></h2>
-        </div>
-        <a class="text-link" href="#contact">View all projects <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="project-grid">
-        <a class="project project-large" href="#contact">
-          <div class="project-visual project-sunrise"><span>Solace</span></div>
-          <div class="project-meta"><strong>Solace Skincare</strong><span>Brand identity · E-commerce</span></div>
-        </a>
-        <a class="project" href="#contact">
-          <div class="project-visual project-blue"><span>Field<br>notes</span></div>
-          <div class="project-meta"><strong>Field Notes</strong><span>Strategy · Digital product</span></div>
-        </a>
-        <a class="project" href="#contact">
-          <div class="project-visual project-green"><span>Good<br>neighbor</span></div>
-          <div class="project-meta"><strong>Good Neighbor</strong><span>Campaign · Art direction</span></div>
-        </a>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <p class="eyebrow">03 / A little about us</p>
-      <p class="about-statement">We believe the best work lives at the intersection of <em>clarity, curiosity,</em> and a little bit of <em>chaos.</em></p>
-    </section>
-
-    <section id="contact" class="contact">
-      <p class="eyebrow">Have a project in mind?</p>
-      <h2>Let's make<br><em>something great.</em></h2>
-      <a class="contact-link" href="mailto:hello@northstar.studio">hello@northstar.studio <span aria-hidden="true">↗</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© 2025 Northstar Studio</span>
-    <div class="footer-links">
-      <a href="#contact">Instagram</a>
-      <a href="#contact">LinkedIn</a>
-      <a href="#services">Back to top ↑</a>
-    </div>
-  </footer>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
