@@ -155,8 +155,8 @@ export const quoteCategories = {
     {
       category: "My writing",
       title: "Stupid Cupid",
-      text: "Stupid Cupid points arrows at all the teenagers like they were made for each other.",
-      note: "A little bit of teenage chaos",
+      text: "Stupid Cupid shoots arrows at teenagers like every awkward smile is a lifetime promise, every shared earbud is destiny, and every racing heartbeat means the universe has finally picked a favorite.",
+      note: "A tender little disaster with excellent aim",
     },
   ],
   Good: buildQuotes("Good", goodStarts, goodEndings, "A little brightness for the day"),
