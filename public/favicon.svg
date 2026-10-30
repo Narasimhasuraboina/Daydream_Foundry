@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f39a70" />
+      <stop offset="55%" stop-color="#e86d79" />
+      <stop offset="100%" stop-color="#9a87ca" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="16" fill="url(#brandGrad)" />
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="28" font-weight="bold" fill="#ffffff">D</text>
+</svg>
+
